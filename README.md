@@ -6,10 +6,10 @@
 ### <div align="center">I'm Taejin Jung, a passionate full-stack web developer 🚀</div>  
   
 
-- 🔭 I’m currently attending [Lighthouse Labs Web-dev bootcamp](https://www.lighthouselabs.ca/)  
+- 🔭 I graduated [Lighthouse Labs Web-dev bootcamp](https://www.lighthouselabs.ca/)  
   
 
-- 🌱 I’m currently learning Javascript and web frameworks  
+- 🌱 I’m currently learning Javascript and web frameworks - React 
   
 
 - ❓ Ask me about anything related to web development  
