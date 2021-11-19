@@ -9,7 +9,7 @@
 - 🔭 I graduated [Lighthouse Labs Web-dev bootcamp](https://www.lighthouselabs.ca/)  
   
 
-- 🌱 I’m currently learning Javascript and web frameworks - React 
+- 🌱 I’m currently learning Javascript & Typescript and web frameworks - React 
   
 
 - ❓ Ask me about anything related to web development  
