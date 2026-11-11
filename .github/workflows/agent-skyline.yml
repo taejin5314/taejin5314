@@ -1,0 +1,42 @@
+name: Redraw the agent skyline
+
+# Once a day, redraw assets/agent-skyline.svg from the public git history of the Creator Assist repository.
+on:
+  schedule:
+    - cron: '17 9 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: agent-skyline
+  cancel-in-progress: true
+
+jobs:
+  draw:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Fetch the history (commits only, no files)
+        run: git clone --filter=blob:none --no-checkout https://github.com/taejin5314/claude-codex-loop-engineering.git "$RUNNER_TEMP/loop"
+
+      - name: Draw
+        run: node scripts/agent-skyline.mjs "$RUNNER_TEMP/loop"
+
+      - name: Commit if it changed
+        run: |
+          if git diff --quiet -- assets/agent-skyline.svg; then
+            echo "No new merges; nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/agent-skyline.svg
+          git commit -m "Redraw the agent skyline"
+          git push

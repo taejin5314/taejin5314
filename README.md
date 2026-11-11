@@ -8,6 +8,8 @@ app that records gameplay, detects highlights and supports team video review, on
 active users. I own features from requirements to release: the desktop client, the REST APIs behind recording upload
 and clip sharing, and the performance and crash work that keeps recording smooth while a game is running.
 
+[![Every change my coding agent merged to main, one block per merge and one column per day](assets/agent-skyline.svg)](https://github.com/taejin5314/claude-codex-loop-engineering)
+
 ## What I am building
 
 ### [Creator Assist](https://github.com/taejin5314/claude-codex-loop-engineering): coding agents that merge on their own, safely
@@ -15,9 +17,9 @@ and clip sharing, and the performance and crash work that keeps recording smooth
 A local orchestrator that runs the whole loop (plan, implement, check, independent review, fix, merge) with Claude
 Code and Codex, and stops to ask a human when a decision is risky.
 
-[![One real run of the loop, replayed from its event log](assets/creator-assist-run.gif)](https://github.com/taejin5314/claude-codex-loop-engineering)
+[![One real run of the loop, replayed from its event log](assets/creator-assist-run.webp)](https://github.com/taejin5314/claude-codex-loop-engineering)
 
-- **1,005 changes merged to `main` by the loop itself** in eight weeks, 69% of them on the first attempt, with a
+- **More than 1,000 changes merged to `main` by the loop itself** in eight weeks, 69% of them on the first attempt, with a
   median of about 10 minutes from start to `main`.
 - **354 times it stopped and asked** instead of guessing. A boundary gate rejected 315 attempts that touched files
   outside their task, and an independent reviewer sent 392 changes back.
