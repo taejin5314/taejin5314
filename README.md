@@ -1,94 +1,59 @@
-<div align="center">
-<img src="https://github.com/taejin5314/taejin5314/blob/master/Taejin-Jung-banner.png" align="center" style="width: 100%" />
-</div>  
-  
+# Taejin Jung
 
-### <div align="center">I'm Taejin Jung, a passionate full-stack web developer 🚀</div>  
-  
+Software engineer in Toronto. I build desktop software that has to stay fast while something heavier runs beside it,
+and tools that let coding agents work unattended without being trusted blindly.
 
-- 🔭 I graduated [Lighthouse Labs Web-dev bootcamp](https://www.lighthouselabs.ca/)  
-  
+Since 2021 I have worked at [Insights.gg](https://insights.gg) on Insights Capture, an Electron and TypeScript/React
+app that records gameplay, detects highlights and supports team video review, on a platform serving 140K+ daily
+active users. I own features from requirements to release: the desktop client, the REST APIs behind recording upload
+and clip sharing, and the performance and crash work that keeps recording smooth while a game is running.
 
-- 🌱 I’m currently learning Javascript & Typescript and web frameworks - React 
-  
+## What I am building
 
-- ❓ Ask me about anything related to web development  
-  
+### [Creator Assist](https://github.com/taejin5314/claude-codex-loop-engineering): coding agents that merge on their own, safely
 
-<br/>  
+A local orchestrator that runs the whole loop (plan, implement, check, independent review, fix, merge) with Claude
+Code and Codex, and stops to ask a human when a decision is risky.
 
+[![One real run of the loop, replayed from its event log](assets/creator-assist-run.gif)](https://github.com/taejin5314/claude-codex-loop-engineering)
 
-## My Skill Set  
-<table><tr><td valign="top" width="33%">
+- **1,005 changes merged to `main` by the loop itself** in eight weeks, 69% of them on the first attempt, with a
+  median of about 10 minutes from start to `main`.
+- **354 times it stopped and asked** instead of guessing. A boundary gate rejected 315 attempts that touched files
+  outside their task, and an independent reviewer sent 392 changes back.
+- **249 architecture decision records**, each tied to the measurement or incident behind it, and 389 test files
+  gating every pull request.
 
+### [autoMeetic](https://github.com/taejin5314/autoMeetic): a real-time AI meeting copilot
 
+An Electron desktop app that captions a call live, translates it, draws the discussion on a whiteboard as it
+happens, and keeps a searchable memory of every meeting. Transcripts are stored in SQLite with embeddings computed
+on the device, so "what did we decide about X?" is answered with citations and no transcript is sent to an embedding
+service. 384 tests.
 
-### Frontend  
-<div align="center">  
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" height="50" />  
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/bootstrap-plain.svg" alt="Bootstrap" height="50" />  
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="50" />  
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="50" />  
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="50" />    
-</div>
+### [ikea-mcp](https://github.com/taejin5314/ikea-mcp): an open-source MCP server, published on npm
 
-</td><td valign="top" width="33%">
+`npx ikea-mcp` gives an AI assistant nine tools for IKEA product search and live store stock in the US and Canada,
+including "which store can fill this whole cart?". Two transports (stdio and Streamable HTTP), bounded fan-out with
+retries, and errors returned as data so an assistant can explain a partial answer.
 
+## How I work
 
+- **Decisions are written down before the code.** A change in design starts as a short record of the problem, the
+  options and the evidence, so the next person, or the next agent, does not have to guess why.
+- **Claims come with evidence.** "Done" means a check ran and passed, with the command and its exit code. I measure
+  before I optimize and again after.
+- **Agents get boundaries, not trust.** I give them small tasks, the files they may touch and a gate they cannot
+  talk their way past, then let them run.
+- **Small changes, shipped often.** One goal per change, reviewed by someone, or something, that did not write it.
 
-### Backend  
-<div align="center">  
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="50" />  
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/php-original.svg" alt="PHP" height="50" />  
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/mongodb-original-wordmark.svg" alt="MongoDB" height="50" />  
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg" alt="Node.js" height="50" />  
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/linux-original.svg" alt="Linux" height="50" />  
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/python-original.svg" alt="Python" height="50" />  
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/express-original-wordmark.svg" alt="Express.js" height="50" />  
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="50" />  
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/redux-original.svg" alt="Redux" height="50" />  
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/gnu_bash-icon.svg" alt="Bash" height="50" />  
-</div>
+## Tools I reach for
 
-</td><td valign="top" width="33%">
+- Languages and runtime: TypeScript, JavaScript, Python, SQL, Node.js
+- Product: React, Electron, REST APIs, PostgreSQL, MongoDB, SQLite
+- Delivery: Vitest, GitHub Actions, Docker
+- AI tooling: Claude Code, Codex, OpenAI Realtime API, Model Context Protocol
 
+## Contact
 
-
-### DevOps  
-<div align="center">    
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/linux-original.svg" alt="Linux" height="50" />  
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="50" />  
-<img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/gnu_bash-icon.svg" alt="Bash" height="50" />  
-</div>
-
-</td></tr></table>  
-
-<br/>  
-
-
-## Connect with me  
-<div align="center">
-<a href="https://github.com/taejin5314" target="_blank">
-<img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
-</a>
-<a href="https://www.linkedin.com/in/taejin-jung-0abb42114/" target="_blank">
-<img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin style="margin-bottom: 5px;" />
-</a>
-</div>  
-  
-
-<br/>  
-
-
-## Github Stats  
-<div align="center"><img src="https://github-readme-stats.vercel.app/api?username=taejin5314&show_icons=true&count_private=true&hide_border=true" align="center" /></div>  
-
-<br/>  
-
-<div align="center"><img src="https://img.shields.io/github/followers/taejin5314?style=social" /></div>  
-
-<br/>  
-
-<div align="center">
-<img src="https://komarev.com/ghpvc/?username=taejin5314&color=blue" align="center" />
-</div>  
+[LinkedIn](https://www.linkedin.com/in/taejin-jung-0abb42114/)
